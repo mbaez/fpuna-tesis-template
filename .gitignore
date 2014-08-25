@@ -1,0 +1,16 @@
+*.aux
+*.log
+*.pdf
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+*.lof
+*.lot
+*.toc
+*.fdb_latexmk
+*.orig
+*.loa
+*.gz
+*.tks
+/tesis-blx.bib

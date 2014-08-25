@@ -1,0 +1,65 @@
+%%%
+%%% Conjuto de funciones utilitarias
+%%% autor: Maximiliano Báez
+%%% fecha: 25/08/2014
+%%%
+
+\usepackage{tablefootnote} %para utilizar \footnote{}
+\usepackage{amssymb}
+\renewcommand{\thefootnote}{\arabic{footnote}}
+
+%%Para la construcción de la lista de simbolos
+% Macro for 'List of Symbols', 'List of Notations' etc...
+\def\listofsymbols{
+    \input{simbolos}
+    \clearpage{}
+}
+\def\newsymbol #1: #2#3{$#1$ \> \parbox{5in}{#2 \dotfill \pageref{#3}}\\}
+\def\addsymbol#1{\label{#1}}
+
+% Para las imagenes en grilla
+% custom commands
+\newcommand{\foreign}[1]{{\it #1}}
+\DeclareMathOperator*{\argmax}{arg\,max}
+%\algsetup{}
+\algsetup{
+    indent=4em,
+    linenosize=\small,
+    linenodelimiter=.
+}
+
+\usepackage{amsmath}
+
+%% se utilizan para referenciar figuras, tablas, secciones y algoritmos
+\newcommand{\figref}[1]{Figura \ref{#1}}
+\newcommand{\tabref}[1]{Tabla \ref{#1}}
+\newcommand{\secref}[1]{sección \ref{#1}}
+\newcommand{\algref}[1]{Algoritmo \ref{#1}}
+
+
+%Traducción al español del paquete algorithmic%
+\floatname{algorithm}{Algoritmo}
+\renewcommand{\listalgorithmname}{Lista de algoritmos}
+\renewcommand{\algorithmicrequire}{\textbf{Entrada:}}
+\renewcommand{\algorithmicensure}{\textbf{Salida:}}
+\renewcommand{\algorithmicend}{\textbf{fin}}
+\renewcommand{\algorithmicif}{\textbf{si}}
+\renewcommand{\algorithmicthen}{\textbf{entonces}}
+\renewcommand{\algorithmicelse}{\textbf{si no}}
+\renewcommand{\algorithmicelsif}{\algorithmicelse,\ \algorithmicif}
+\renewcommand{\algorithmicendif}{\algorithmicend\ \algorithmicif}
+\renewcommand{\algorithmicfor}{\textbf{para}}
+\renewcommand{\algorithmicforall}{\textbf{para todo}}
+\renewcommand{\algorithmicdo}{\textbf{hacer}}
+\renewcommand{\algorithmicendfor}{\algorithmicend\ \algorithmicfor}
+\renewcommand{\algorithmicwhile}{\textbf{mientras}}
+\renewcommand{\algorithmicendwhile}{\algorithmicend\ \algorithmicwhile}
+\renewcommand{\algorithmicloop}{\textbf{repetir}}
+\renewcommand{\algorithmicendloop}{\algorithmicend\ \algorithmicloop}
+\renewcommand{\algorithmicrepeat}{\textbf{repetir}}
+\renewcommand{\algorithmicuntil}{\textbf{hasta que}}
+\renewcommand{\algorithmicprint}{\textbf{imprimir}}
+\renewcommand{\algorithmicreturn}{\textbf{retorna}}
+\renewcommand{\algorithmictrue}{\textbf{cierto }}
+\renewcommand{\algorithmicfalse}{\textbf{falso }}
+\renewcommand{\algorithmiccomment}{\textbf{comentario : }}

@@ -1,0 +1,80 @@
+\documentclass[final,fmstyle]{./util/fpunathesis}
+
+% paquetes recomendados
+\usepackage{amsmath,amsthm}
+\usepackage{textcomp}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[style=numeric, uniquename=full, sorting=none,backend=biber, natbib=true]{biblatex}
+\usepackage{listings}
+% para la lista de simbolos
+\usepackage{array} %for vertical thick lines in tables
+\usepackage{multirow} %multirow tables
+\usepackage{nicefrac} %for fractions like 1/4
+%\usepackage[table]{xcolor} %para colorear las tablas
+
+
+%referencias
+\addbibresource{referencias.bib}
+%se importan las configuraciones custmizdas realizadas.
+\include{./util/custom}
+
+% datos de la tesis y el/los autor/es
+\title{Titulo del trabajo}
+\author{Autor1 del trabajo y Autor2 del trabajo}
+\degree{Inform\'{a}tica}
+
+\advisor{ Ing. Phd.}{Juan Pueblo}
+
+%\newtheorem{definicion}{Definición}
+
+\logosource{./graphics/logo.png}
+
+
+\begin{document}
+
+\maketitle     % esto hace las portadas
+
+% Agradecimientos
+%\include{agradecimientos}
+
+% los siguientes comandos producen 'indices.
+
+% Tabla de contenidos
+\tableofcontents
+% Lista de figuras, incluye en la lista todas las figuras de forma automática
+\listoffigures
+% Lista de tablas, incluye en la lista todas las tablas de forma automática
+\listoftables
+% Lista de algoritmos, incluye en la lista todas los algoritmos de forma automática
+\listofalgorithms
+%\include{acronimos}
+\listofsymbols
+
+
+\mainmatter  % inician los capitulos de la tesis
+
+
+% incluye aqui los capitulos (un archivo .tex por capitulo)
+%\include{capitulo-1/capitulo-1}
+%\include{capitulo-3/capitulo-3}
+%\include{capitulo-2/capitulo-2}
+%\include{capitulo-4/capitulo-4}
+%\include{capitulo-5/capitulo-5}
+%\include{capitulo-6/capitulo-6}
+%\include{capitulo-7/capitulo-7}
+
+\appendix   % inician los apendices de tu tesis
+% los cap'itulos que incluyas a partir de aqu'i aparecen
+% como ap'endices
+%\include{anexos/anexo-1}
+% estos comandos generan la bilbiograf'ia
+\printbibliography
+
+\end{document}
