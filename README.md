@@ -13,3 +13,12 @@ sudo apt-get install biblatex
 sudo apt-get install texlive-science
 sudo apt-get install texlive-latex-extra
 ```
+
+
+Generar pdf
+---
+Para generar el pdf final se creo un pequeño script para facilitar la tarea.
+
+```sh
+sh generate.sh
+```
