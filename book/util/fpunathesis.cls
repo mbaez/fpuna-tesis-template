@@ -1,21 +1,19 @@
-%% Se modificÛ el template ucathesis.cls para adaptarlo al formato
-%% de la Facultad Politecnica de la Universidad Nacional de AsunciÛn
-%% Template original de UCA
-%%
+%% Template basado en ucathesis.cls (link?) de la Universidad Cat√≥lica de Asunci√≥n, 
+%% modificado para adaptarlo al formato de la Facultad Politecnica de la 
+%% Universidad Nacional de Asunci√≥n
 
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
-\ProvidesClass{fpunathesis}[2014/08/25 v0.01 Formato para tesis de la FPUNA]
+\ProvidesClass{fpunathesis}[2014/08/25 v0.02 Formato para tesis de la FPUNA]
 
 \newif\if@isdraft
 \newif\if@atstyle
 \newcommand{\@logosource}{logocolor.eps}
-%\usepackage[ansinew]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage[pdftex]{graphicx}
 \usepackage{algorithm}
 \usepackage{algorithmic}
 
 \bibliographystyle{unsrt} % Numeros ordenados por entrada
-%%\bibliographystyle{alpha} % Nombre y aÒo
 
 \DeclareOption{draft}{ \@isdrafttrue  \PassOptionsToClass{draft}{report} }
 \DeclareOption{final}{ \@isdraftfalse \PassOptionsToClass{final}{report} }
@@ -62,7 +60,7 @@
 
 \newcommand{\@degree}{\ClassError{fpunathesis}{Falta especificar \string\degree{}}
  {Usa el comando \string\degree{} en el preambulo para especificar la carrera \MessageBreak
-  que estas estudiandio: \protect Matem\'aticas, F\'{\i}sica, Actuaria.}}
+  que estas estudiandio: \protect Matem√°ticas, F√≠sica, Actuaria.}}
 \newcommand{\degree}[1]{\gdef\@degree{#1}}
 
 \newcommand{\@advisorname}{}
@@ -71,19 +69,15 @@
  {Usa el comando \string\advisor[]{}{} en el preambulo para especificar a tu \MessageBreak
   director de tesis. El primer argumento es su titulo (Dr., M. en C.) \MessageBreak
   y el segundo su nombre completo. Opcionalmente puedes modificar su puesto \MessageBreak
-  en el jurado si es distinto a `Vocal y Director'.}}
+  en el jurado si es distinto a 'Vocal y Director'.}}
 \newcommand{\advisor}[3][Orientador:]%
   {\gdef\@advisorname{#1}\gdef\@advisortitle{#2}\gdef\@advisor{#3}}
 
 
-\newcommand{\@institution}{Universidad Nacional de Asunci\'{o}n}
+\newcommand{\@institution}{Universidad Nacional de Asunci√≥n}
 \newcommand{\institution}[1]{\gdef\@institution{#1}}
-\newcommand{\@nameinstitution}{"Nuestra SeÒora de la AsunciÛn"}
-\newcommand{\nameinstitution}[1]{\gdef\@institution{#1}}
-\newcommand{\@faculty}{Facultad Polit\'{e}cnica}
+\newcommand{\@faculty}{Facultad Polit√©cnica}
 \newcommand{\faculty}[1]{\gdef\@faculty{#1}}
-\newcommand{\@department}{Departamento de ElectrÛnica e Inform·tica}
-\newcommand{\department}[1]{\gdef\@department{#1}}
 \newcommand{\@grade}{Ingeniero}
 \newcommand{\grade}[1]{\gdef\@grade{#1}}
 \newcommand{\@address}{San Lorenzo - Paraguay}
@@ -102,8 +96,8 @@
       Marzo\or Abril\or Mayo\or Junio\or Julio\or Agosto\or Septiembre\or
       Octubre\or Noviembre\or Diciembre\fi}
 \newcommand{\termname}{\ifcase\month\or Primavera\or Primavera\or
-      Primavera\or Primavera\or Primavera\or Verano\or Verano\or Oto\~no\or Oto\~no\or
-      Oto\~no\or Oto\~no\or Oto\~no\fi}
+      Primavera\or Primavera\or Primavera\or Verano\or Verano\or Oto√±o\or Oto√±o\or
+      Oto√±o\or Oto√±o\or Oto√±o\fi}
 
 \newcount\hours \newcount\minutes
 \def\SetTime{\hours=\time
@@ -122,7 +116,7 @@
 
 \newcommand{\draftmodeleyend}{(TESIS COMPILADA EN MODO DRAFT)}
 \newcommand{\draftleyend}{BORRADOR \shorttime{} - \shortdate{}}
-\newcommand{\blankpageleyend}{(esta p\'agina se dej\'o en blanco de manera intencional)}
+\newcommand{\blankpageleyend}{(esta p√°gina se dej√≥ en blanco de manera intencional)}
 
 % double & singlespacing %
 \def\setspace@size{\ifx\@currsize\normalsize\@normalsize\else\@currsize\fi}
@@ -228,10 +222,7 @@
   \begin{titlepage}%
   \begin{center}
     \vspace{1.5\@line}\textbf{\large\MakeUppercase{\@institution}}\par
-    %\vspace{1.5\@line}\textbf{\large\MakeUppercase{\@nameinstitution}}\par
     \vspace{\@line}\textbf{\large\@faculty}\par
-    %\textbf{\large\@department}\par
-    %%\vspace{2\@line}\includegraphics{logo.png}\par
     \vspace{2\@line}\includegraphics{\@logosource}\par
     \vspace{0.5\@line}\textsc{\Large``\@title''}\par
     \vspace{0.5\@line}
@@ -239,7 +230,7 @@
       \textsc{Trabajo Final de Grado presentado por}\par
       \vfill{\scshape \@typeauthor{\unskip,\par}{\unskip\par y{} }}\par
       \vfill\textsc{como requisito}\par
-      \textsc{para obtener el tÌtulo de \@grade}\par
+      \textsc{para obtener el t√≠tulo de \@grade}\par
       \textsc{en \@degree}\par
       \vfill\textsc{\@advisorname}\par\vspace{4pt}
       \textsc{\@advisortitle\ \@advisor}\par\vspace{4pt}
