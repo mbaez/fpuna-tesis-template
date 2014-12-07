@@ -1,0 +1,132 @@
+
+\section{Introduction}
+This demo file is intended to serve as a ``starter file''
+for IEEE conference papers produced under \LaTeX\ using
+IEEEtran.cls version 1.7 and later.
+
+I wish you the best of success.
+
+\subsection{Subsection Heading Here}
+Subsection text here.
+
+\subsubsection{Subsubsection Heading Here}
+Subsubsection text here.
+
+\section{Figuras, tablas y algoritmos}
+\label{sec:figuras-tablas-algoritmos}
+\subsection{Figuras}
+Ejemplo de como hacer figuras utilizando el paquete figure\footnote{http://en.wikibooks.org/wiki/LaTeX/Floats,\_Figures\_and\_Captions} de LaTex.
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.225\textwidth}
+            \includegraphics[width=\textwidth]{../book/capitulo-ej/graphics/ejemplo-1.jpg}
+            \caption{Subfigura 1.}
+    \end{subfigure}
+    ~~~~
+    \begin{subfigure}[b]{0.225\textwidth}
+            \includegraphics[width=\textwidth]{../book/capitulo-ej/graphics/ejemplo-1.jpg}
+            \caption{Subfigura 2.}
+
+    \end{subfigure}
+    \begin{subfigure}[b]{0.225\textwidth}
+            \includegraphics[width=\textwidth]{../book/capitulo-ej/graphics/ejemplo-1.jpg}
+            \caption{Subfigura 3.}
+    \end{subfigure}
+    ~~~~
+    \begin{subfigure}[b]{0.225\textwidth}
+            \includegraphics[width=\textwidth]{../book/capitulo-ej/graphics/ejemplo-1.jpg}
+            \caption{Subfigura 4.}
+
+    \end{subfigure}
+    \caption{\label{fig:ejemplo-fig-grilla}Ejemplo de una grilla de figuras en LaTex.}
+
+\end{figure}
+
+\section{Tablas}
+Ejemplo de como hacer tablas utilizando el paquete table\footnote{http://en.wikibooks.org/wiki/LaTeX/Tables} de LaTex.
+\begin{table}[!hptb]
+\begin{threeparttable}
+    \begin{minipage}[b]{0.5\textwidth}
+        \caption{\label{tab:tabla-ejemplo} Ejemplo de una tabla en LaTex.}
+         \footnotesize
+        \begin{tabular}{l c c c c}
+            \hline\\
+            Año & Periodo & Columna & Columna2 & Columna3\\
+            \hline
+            \hline\\
+            2014 & 29-12-13 / 31-05-14 & 10541 & 1052 & 2\\
+            2013 & 30-12-12 / 21-12-13 & 153793 & 131306 & 70\\
+            2012 & 01-01-12 / 22-12-12 & 37815 & 30588 & 11\\
+            2011 & 03-01-11 / 29-12-11 & 53397 & 42264 & 62\\
+            2010 & 11-10-09 / 25-12-10 & 21951 & 13760 & --\tnote{a}\\
+        \hline
+    \end{tabular}
+    \begin{tablenotes}[flushleft]\footnotesize
+    \item[a]{Esta es una nota.}
+    \end{tablenotes}
+    \end{minipage}
+    \end{threeparttable}
+\end{table}
+
+
+\subsection{Algoritmos}
+Ejemplo de como hacer agloritmos utilizando el paquete algorithm\footnote{http://en.wikibooks.org/wiki/LaTeX/Algorithms} de LaTex.
+\begin{algorithm}                      % enter the algorithm environment
+\caption{\label{alg:alg1}Calculate $y = x^n$}          % give the algorithm a caption
+\begin{algorithmic}[1]                 % enter the algorithmic environment
+    \Require $n \geq 0 \vee x \neq 0$
+    \Ensure $y = x^n$
+    \State $y \Leftarrow 1$
+    \If{$n < 0$}
+        \State $X \Leftarrow 1 / x$
+        \State $N \Leftarrow -n$
+    \Else
+        \State $X \Leftarrow x$
+        \State $N \Leftarrow n$
+    \EndIf
+    \While{$N \neq 0$}
+        \If{$N$ is even}
+            \State $X \Leftarrow X \times X$
+            \State $N \Leftarrow N / 2$
+        \Else[$N$ is odd]
+            \State $y \Leftarrow y \times X$
+            \State $N \Leftarrow N - 1$
+        \EndIf
+    \EndWhile
+\end{algorithmic}
+\end{algorithm}
+
+\subsection{Ecuaciones}
+En esta sección se añade una pequeña ecuación con el fin de ejemplificar su
+uso.
+\begin{equation}\label{eq:ecuacion-ej}
+  x = a_0 + \cfrac{1}{a_1
+          + \cfrac{1}{a_2
+          + \cfrac{1}{a_3 + \cfrac{1}{a_4} } } }
+\end{equation}
+
+\section{Referencias y citaciones}
+Para referenciar secciones, figuras, tablas, algoritmos, o formulas se puede
+emplear $\setminus$ref\{label-del-item\} o emplear cualquiera de las sigientes macros:
+
+\begin{itemize}
+\item \textit{$\setminus$eqref\{label-eq\}} : Ejemplo \eqref{eq:ecuacion-ej}
+\item \textit{$\setminus$secref\{label-sec\}} : Ejemplo \secref{sec:figuras-tablas-algoritmos}
+\item \textit{$\setminus$tabref\{label-tab\}} : Ejemplo \tabref{tab:tabla-ejemplo}
+\item \textit{$\setminus$figref\{label-fig\}} : Ejemplo \figref{fig:ejemplo-fig-grilla}
+\item \textit{$\setminus$algref\{label-alg\}} : Ejemplo \algref{alg:alg1}
+\end{itemize}
+
+En esta sección se añade un ejemplo de como citar a un autor, utilizando
+el $\setminus$cite\{label-bib1\} de bibText \footnote{http://en.wikibooks.org/wiki/LaTeX/Bibliography\_Management}.
+Por ejemplo esta es una citación \cite{griffiths1997learning} a un solo
+autor, y esta es a 2 autores \cite{griffiths1997learning, lamport1985i1}.
+
+
+\section{Conclusion}
+The conclusion goes here.
+
+% use section* for acknowledgement
+\section*{Acknowledgment}
+The authors would like to thank...
+

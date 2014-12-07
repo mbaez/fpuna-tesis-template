@@ -1,0 +1,130 @@
+
+\documentclass[conference]{IEEEtran}
+
+\usepackage[style=numeric, uniquename=full, sorting=none,backend=biber, natbib=true]{biblatex}
+
+%se importan las configuraciones custmizdas realizadas.
+\addbibresource{../book/referencias.bib}
+
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+
+% *** GRAPHICS RELATED PACKAGES ***
+%
+\usepackage[pdftex]{graphicx}
+
+
+% *** MATH PACKAGES ***
+%
+\usepackage{amsmath,amsthm}
+\usepackage{amssymb}
+\usepackage{textcomp}
+
+% *** SPECIALIZED LIST PACKAGES ***
+\usepackage{algorithm}
+%\usepackage{algorithmic}
+\usepackage{algpseudocode}
+
+
+%Traducción al español del paquete algorithmic%
+\floatname{algorithm}{Algoritmo}
+\renewcommand{\algorithmicrequire}{\textbf{Entrada:}}
+\renewcommand{\algorithmicensure}{\textbf{Salida:}}
+\renewcommand{\algorithmicend}{\textbf{fin}}
+\renewcommand{\algorithmicif}{\textbf{si}}
+\renewcommand{\algorithmicthen}{\textbf{entonces}}
+\renewcommand{\algorithmicelse}{\textbf{si no}}
+\newcommand{\algorithmicelsif}{\textbf{si no, si}}
+\renewcommand{\algorithmicfor}{\textbf{para}}
+\renewcommand{\algorithmicforall}{\textbf{para todo}}
+\renewcommand{\algorithmicdo}{\textbf{hacer}}
+ %\renewcommand{\algorithmicendfor}{\algorithmicend\ \algorithmicfor}
+% \renewcommand{\algorithmicwhile}{\textbf{mientras}}
+% \renewcommand{\algorithmicendwhile}{\algorithmicend\ \algorithmicwhile}
+% \renewcommand{\algorithmicloop}{\textbf{repetir}}
+% \renewcommand{\algorithmicendloop}{\algorithmicend\ \algorithmicloop}
+% \renewcommand{\algorithmicrepeat}{\textbf{repetir}}
+% \renewcommand{\algorithmicuntil}{\textbf{hasta que}}
+% \renewcommand{\algorithmicprint}{\textbf{imprimir}}
+\renewcommand{\algorithmicreturn}{\textbf{retorna}}
+% \renewcommand{\algorithmictrue}{\textbf{cierto }}
+% \renewcommand{\algorithmicfalse}{\textbf{falso }}
+% *** ALIGNMENT PACKAGES ***
+%
+%\usepackage{array}
+%\usepackage{mdwmath}
+%\usepackage{mdwtab}
+
+%\usepackage{eqparbox}
+\usepackage{threeparttable}
+\usepackage{caption}
+\usepackage{subcaption}
+%\usepackage[caption=false]{caption}
+%\usepackage[font=footnotesize]{subfig}
+
+%\usepackage[caption=false,font=footnotesize]{subfig}
+
+% *** FLOAT PACKAGES ***
+%
+%\usepackage{fixltx2e}
+%\usepackage{stfloats}
+
+\newcommand{\figref}[1]{Figura \ref{#1}}
+\newcommand{\tabref}[1]{Cuadro \ref{#1}}
+\newcommand{\secref}[1]{sección \ref{#1}}
+\renewcommand{\algref}[1]{Algoritmo \ref{#1}}
+
+% correct bad hyphenation here
+\hyphenation{}
+
+
+\begin{document}
+%
+% paper title
+% can use linebreaks \\ within to get better formatting as desired
+\title{Modelo predictivo de focos de dengue aplicado a Sistemas de Información Geográfica}
+
+
+% author names and affiliations
+% use a multiple column layout for up to three different
+% affiliations
+\author{\IEEEauthorblockN{Autor del trabjao \IEEEauthorrefmark{1},
+Tutor del trabajo\IEEEauthorrefmark{2}}
+\IEEEauthorblockA{Facultad Politécnica- Universidad Nacional de Asunción\\
+    P.O.Box: 2111 SL, San Lorenzo - Central - Paraguay\\
+Email: \IEEEauthorrefmark{1}autor@mail.com,
+\IEEEauthorrefmark{2}tutor@mail.com}}
+
+% make the title area
+\maketitle
+
+\begin{abstract}
+%\boldmath
+Abstrac del trabjo
+\end{abstract}
+
+\begin{IEEEkeywords}
+test, tempalte, IEEE
+\end{IEEEkeywords}
+
+
+
+% For peerreview papers, this IEEEtran command inserts a page break and
+% creates the second title. It will be ignored for other modes.
+\IEEEpeerreviewmaketitle
+
+%introduccion
+\input{introduccion}
+%Materiales y metodos
+%\input{materiales-metodos}
+%Resultados y discusión
+%\input{resultados-discusion}
+%conclusión final
+%\input{conclusion}
+
+\printbibliography
+
+% that's all folks
+\end{document}
+
+
