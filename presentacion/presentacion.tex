@@ -1,0 +1,74 @@
+\documentclass[oneside]{beamer}
+
+
+%*****************************************************************************%
+%   Theme para la Presentación                                                %
+%*****************************************************************************%
+\usetheme[pageofpages=de,% String used between the current page and thetotal page count.
+          bullet=circle,% Use circles instead of squares for bullets.
+          titleline=true,% Show a line below the frame title.
+          alternativetitlepage=true,% Use the fancy title page.
+          titlepagelogo=../book/graphics/logo.png,% Logo for the first page.
+          ]{Torino}
+% Nouvelle is a green and red alternative to the chameleon color theme.
+\usecolortheme{freewilly}
+\providecommand*{\eqcolon}{\mathrel{=\!\raise.16ex\hbox{\footnotesize\!:}}} % para las definiciones
+
+%*****************************************************************************%
+%   Paquetes principales                                                      %
+%*****************************************************************************%
+\usepackage{amssymb, amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{float}
+\usepackage{afterpage}
+\usepackage{dsfont}
+\usepackage{url}
+\usepackage{color}
+\usepackage{lettrine}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{graphicx}
+%\usepackage{subfig}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{multimedia}
+\usepackage{verbatim} % comentarios
+\usepackage{pdfpages}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp}
+
+%Para determinar la fecha actual
+\newcommand{\monthname}{\ifcase\month\or Enero\or Febrero\or
+      Marzo\or Abril\or Mayo\or Junio\or Julio\or Agosto\or Septiembre\or
+      Octubre\or Noviembre\or Diciembre\fi}
+
+\newcommand{\thismonth}{\monthname,\ \the\year}
+
+
+\author{\  \\ Autor del trabajo}
+\title{Titulo del trabajo}
+\institute{Facultad Politécnica- UNA}
+%pone la fecha de generación como portada
+\date{\thismonth}
+
+
+\begin{document}
+%para forzar el total de número de páginas, se utiliza para no tener en cuenta las páginas del anexo
+%\renewcommand{\inserttotalframenumber}{71}
+\begin{frame}[t,plain]
+\titlepage
+\end{frame}
+\include{./introduccion}
+%~ \include{./propuesta/objetivos}
+%~ \include{./propuesta/modelo-propuesto}
+%~ \include{./resultados/resultados}
+%~ \include{./conclusion/conclusion}
+%~ \include{./conclusion/trabajos-futuros}
+%~ \include{./conclusion/aportes}
+%~ \include{./conclusion/despedida}
+
+%\include{./anexos/anexos}
+
+\end{document}
